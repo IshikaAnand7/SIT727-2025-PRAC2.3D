@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todotask-deployment  # Ensure this is indented with two spaces
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: todotask  # Ensure this is indented with two spaces
+  template:
+    metadata:
+      labels:
+        app: todotask  # Ensure this is indented with two spaces
+    spec:
+      containers:
+        - name: todotask-container  # Ensure proper indentation with a dash (-) for list items
+          image: todotask:latest
+          ports:
+            - containerPort: 3000  # Ensure proper indentation with a dash (-) for list items
